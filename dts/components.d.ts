@@ -7,6 +7,8 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    BlueInfoBanner: typeof import('./../src/components/BlueInfoBanner.vue')['default']
+    BlueInfoWrapper: typeof import('./../src/components/BlueInfoWrapper.vue')['default']
     Compute: typeof import('./../src/components/Compute.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -15,10 +17,24 @@ declare module '@vue/runtime-core' {
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElOption: typeof import('element-plus/es')['ElOption']
+    Footer: typeof import('./../src/components/Footer.vue')['default']
+    Grid: typeof import('./../src/components/Grid.vue')['default']
+    HamburgerMenu: typeof import('./../src/components/HamburgerMenu.vue')['default']
+    ImageForm: typeof import('./../src/components/ImageForm.vue')['default']
+    InfoBannerWithBrain: typeof import('./../src/components/InfoBannerWithBrain.vue')['default']
+    InfoBannerWithRainBG: typeof import('./../src/components/InfoBannerWithRainBG.vue')['default']
+    NavBar: typeof import('./../src/components/NavBar.vue')['default']
+    NextButton: typeof import('./../src/components/NextButton.vue')['default']
     Portal: typeof import('./../src/plugins/portal/Portal.vue')['default']
     PortalTarget: typeof import('./../src/plugins/portal/PortalTarget.vue')['default']
+    ProgressBar: typeof import('./../src/components/ProgressBar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SatrtTest: typeof import('./../src/components/SatrtTest.vue')['default']
+    TestForm: typeof import('./../src/components/TestForm.vue')['default']
+    TestFormWithColour: typeof import('./../src/components/TestFormWithColour.vue')['default']
+    TestUnit: typeof import('./../src/components/TestUnit.vue')['default']
+    ToTestButton: typeof import('./../src/components/ToTestButton.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
