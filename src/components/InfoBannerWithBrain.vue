@@ -12,7 +12,7 @@
     <div class="brain-img-wrapper">
       <img src="@/assets/staticResource/testInfo/325-01.jpg">
     </div>
-    <ToTestButton />
+    <ToTestButton class="to-test-button" />
   </div>
 </template>
 
@@ -36,6 +36,22 @@
   & > *{
     font-weight: 900;
   }
+}
+.to-test-button{
+  background: #FFC700;
+  color: #0D0C11;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #0D0C11;
 }
 .brain-img-wrapper{
   margin-top: 35px;

@@ -11,9 +11,7 @@
     <p class="second-text-unit">
       Профессиональная интерпретация и детально проработанные рекомендации позволят вам качественно изменить все аспекты своей жизни: от финансового до любовного.
     </p>
-    <button class="to-test-button">
-      ПРОЙТИ ТЕСТ
-    </button>
+    <ToTestButton class="to-test-button-2" />
     <div class="test-info-footer">
       <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="#FFFFFF">
 
@@ -70,13 +68,23 @@
 
   letter-spacing: 0.05em;
 }
-.to-test-button{
+.to-test-button-2{
+
+  background: none;
+  color: white;
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   border: 1px solid #FFFFFF;
   border-radius: 50px;
-  width: 200px;
-  height: 44px;
-  color: white;
-  margin-top: 33px;
+
 }
 .test-info-footer{
   margin-top: 52px;

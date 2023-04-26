@@ -1,5 +1,5 @@
 <template>
-  <div class="main-wrapper">
+  <div>
     <h2 class="question"> {{ props.question }}</h2>
     <img :src="props.url" class="image">
     <svg v-if="props.enableSVG" class="gray-string" xmlns="http://www.w3.org/2000/svg" width="320" height="4" viewBox="0 0 320 4" fill="#F2F3F3">
@@ -15,19 +15,11 @@
         <p class="answer-text">{{ answer }}</p>
       </div>
     </div>
-    <button
-      :class="{ 'disabled': buttonDisabled }"
-      :disabled="buttonDisabled"
-      @click="router.push(`${props.nextQuestion}`)"
-    >
-      ДАЛЕЕ
-    </button>
+    <NextButton :selectedAnswer="!buttonDisabled" @nextQuestion="onNextQuestion" />
   </div>
 </template>
 
 <script lang="ts" setup>
-
-import { router } from '@/router/router'
 import { ref } from 'vue'
 
 const selectedCell = ref(-1)
@@ -42,9 +34,14 @@ const props = defineProps<{
   question: string
   url: string
   answers: string[]
-  nextQuestion: string
-  enableSVG: boolean
+  enableSVG?: boolean
 }>()
+const emits = defineEmits(['nextQuestion'])
+function onNextQuestion () {
+  buttonDisabled.value = true
+  selectedCell.value = -1
+  emits('nextQuestion')
+}
 </script>
 <style scoped>
 .main-wrapper{
@@ -95,45 +92,6 @@ const props = defineProps<{
   text-align: center;
   letter-spacing: 0.05em;
 
-}
-button {
-  background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, #FFC700 100%);
-  border-radius: 20px;
-  width: 189px;
-  height: 41px;
-  margin-bottom: 21px;
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: #0D0C11;
-}
-
-button.disabled {
-  background: #DADADA;
-  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  width: 189px;
-  height: 41px;
-  font-family: 'Merriweather';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 18px;
-  /* identical to box height */
-
-  text-align: center;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: #8E8E8E;
 }
 .gray-string{
     margin-top: 24px;

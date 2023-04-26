@@ -12,7 +12,8 @@ defineProps<{
 
 <style lang="scss">
 .outer-wrapper {
-  width: 100%;
+ margin: -15px auto 25px auto;
+  width: 260px;
   height: 11px;
   background: #F2F3F3;
   opacity: 0.59;

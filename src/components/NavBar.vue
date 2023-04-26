@@ -65,8 +65,10 @@ const navigation = ref([
 .dropdown-burger-menu {
     background: #181818;
     padding: 17px 13px 17px 15px;
-    position: sticky;
+    position: fixed;
+  z-index: 1000;
     width: 320px;
+
 }
 .burger-menu {
 
@@ -93,7 +95,8 @@ const navigation = ref([
     padding-top: 64px;
     padding-left: 23px;
     z-index: 10;
-    height: 100%;
+
+  height: 568px;
 }
 .links {
   & > * {

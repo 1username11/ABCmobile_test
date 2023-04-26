@@ -1,5 +1,5 @@
 <template>
-  <button class="test-button" @click="router.push('/first-question')">
+  <button class="test-button" @click="router.push('/start-test')">
     ПРОЙТИ ТЕСТ
   </button>
 </template>
@@ -13,7 +13,6 @@ import { router } from '@/router/router'
   margin-top: 20px;
   width: 189px;
   height: 41px;
-  background: #FFC700;
   border-radius: 20px;
 }
 </style>
